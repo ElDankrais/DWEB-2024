@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        .header-img {
-            width: 150px; 
-        }
+      .header-img {
+        width: 150px;
+      }
 
-        #header {
-            margin-bottom: 20px;
-            display: inline-block;
-            width: 100%;
-            border: 5px dashed royalblue;
-        }
+      #header {
+        margin-bottom: 20px;
+        display: inline-block;
+        width: 100%;
+        border: 5px dashed royalblue;
+      }
 
-        .banner {
-              float: right;
-        }
+      .banner {
+        float: right;
+      }
 
-        .img-container {
-          border: 2px solid blueviolet;
-          margin-bottom: 20px;
-        }
+      .img-container {
+        border: 2px solid blueviolet;
+        margin-bottom: 20px;
+      }
 
-        .img-container img {
-          margin-left: 5px;
-          width: 250px;
-        }
-        #customers {
-          font-family: Arial, Helvetica, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        #customers td, #customers th {
-          border: 1px solid #ddd;
-          padding: 8px;
-        }
-        
-        #customers tr:nth-child(even){background-color: #f2f2f2;}
-        
-        #customers tr:hover {background-color: #ddd;}
-        
-        #customers th {
-          padding-top: 12px;
-          padding-bottom: 12px;
-          text-align: left;
-          background-color: #04AA6D;
-          color: white;
-        }
-        input[type=text], select {
+      .img-container img {
+        margin-left: 5px;
+        width: 250px;
+      }
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #customers td,
+      #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #customers tr:hover {
+        background-color: #ddd;
+      }
+
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+      }
+      input[type="text"],
+      select {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -64,132 +70,164 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-        }
+      }
 
-        input[type=submit] {
+      input[type="submit"] {
         width: 100%;
-        background-color: #4CAF50;
+        background-color: #4caf50;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        }
+      }
 
-        input[type=submit]:hover {
+      input[type="submit"]:hover {
         background-color: #45a049;
-        }
+      }
 
-        .form-div {
+      .form-div {
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
-        }
+      }
 
-        .custom-btn {
-          display: inline-block;
-          padding: 10px 20px;
-          margin: 10px 0;
-          color: #fff;
-          background-color: #04AA6D;
-          border: 1px solid #028c59;
-          border-radius: 5px;
-          text-decoration: none;
-        }
+      .custom-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px 0;
+        color: #fff;
+        background-color: #04aa6d;
+        border: 1px solid #028c59;
+        border-radius: 5px;
+        text-decoration: none;
+      }
 
-        .custom-btn:hover {
-          background-color: #028c59;
-          border: 1px solid #016842;
-          transition: 0.3s;
-          transform: scale(1.05);
-        }
+      .custom-btn:hover {
+        background-color: #028c59;
+        border: 1px solid #016842;
+        transition: 0.3s;
+        transform: scale(1.05);
+      }
 
-        .centered-content {
-          text-align: center;
-        }
+      .centered-content {
+        text-align: center;
+      }
     </style>
-</head>
-<body>
-  <div id="header">
-    <h1>Hola mundo</h1>
-    <div class="banner">
-      <img class="header-img" src="https://img.freepik.com/free-photo/lovely-pet-portrait-isolated_23-2149192357.jpg?w=996&t=st=1707691798~exp=1707692398~hmac=aa0ec2d06aee8efbabab995c14b171edd7bcadb9f1b182e1821af39f3321f8c2" alt="perrito">
-      <span>Mi primera chamba</span>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Hola mundo</h1>
+      <div class="banner">
+        <img
+          class="header-img"
+          src="https://img.freepik.com/free-photo/lovely-pet-portrait-isolated_23-2149192357.jpg?w=996&t=st=1707691798~exp=1707692398~hmac=aa0ec2d06aee8efbabab995c14b171edd7bcadb9f1b182e1821af39f3321f8c2"
+          alt="perrito"
+        />
+        <span>Mi primera chamba</span>
+      </div>
     </div>
-  </div>
-  <div class="img-container">
-    <h3>Aquí van las imágenes</h3>
-    <img src="https://i.pinimg.com/236x/44/87/d9/4487d9f8952af5538ca34ddf06a09d5c.jpg">
-    <img src="https://i.pinimg.com/736x/e2/c5/6b/e2c56b5205b2ad7eb31b52f34bb1ee29.jpg" alt="crack">
-    <img src="https://i.pinimg.com/originals/a0/dc/5f/a0dc5f8fc33cd8fd01d26c8f203d0b1c.gif" title="Skeleton dance">
-    <img src="https://i.ibb.co/HXT17Hv/El-bicho-siuuu.jpg" alt="El Bicho Cucuteño">
-    <img src="https://i.pinimg.com/564x/9a/9b/48/9a9b4809ba66f92e280e13b25060f86b.jpg" alt="Sin embargo gato">
-  </div>
-  <table id="customers">
-    <tr>
-      <th>Nombre</th>
-      <th>Color</th>
-      <th>Comida</th>
-    </tr>
-    <tr>
-      <td>Daniel Chanci</td>
-      <td>Negro</td>
-      <td>Pizza</td>
-    </tr>
-    <tr>
-      <td>Sebastián Moreno</td>
-      <td>Lila</td>
-      <td>Frijoles</td>
-    </tr>
-    <tr>
-      <td>Luis Altamar</td>
-      <td>Verde</td>
-      <td>Salchipapa Costeña</td>
-    </tr>
-    <tr>
-      <td>Mateo Álvarez Lebrum</td>
-      <td>Azul</td>
-      <td>Hamburguesa</td>
-    </tr>
-    <tr>
-      <td>Santiago Salazar</td>
-      <td>Azul oscuro</td>
-      <td>Caracoles</td>
-    </tr>
-    <tr>
-      <td>Juan Carlos M</td>
-      <td>Verde</td>
-      <td>Sobrebarriga</td>
-    </tr>
-    <tr>
-      <td>Santiago Varela</td>
-      <td>Azul</td>
-      <td>Pizza</td>
-    </tr>
-    <tr>
-      <td>Guillermo Toloza G.</td>
-      <td>Negro</td>
-      <td>Sushi</td>
-    </tr>
-    <tr>
-      <td>Juan Valencia</td>
-      <td>Morado</td>
-      <td>Pasta</td>
-    </tr>
-  </table>
-  <div class="centered-content">
-    <a class="custom-btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Cuenta gratis Platzi</a>
-  </div>
-  <div class="centered-content">
-    <iframe   
-    width="560" 
-    height="315"
-    src="https://www.youtube.com/embed/YG6kGa3rcg0?si=CpO-mJCdFj5j003M&autoplay=1" 
-    allow="autoplay" 
-    frameborder="0"
-  >
-</iframe>
-  </div>
-</body>
+    <div class="img-container">
+      <h3>Aquí van las imágenes</h3>
+      <img
+        src="https://i.pinimg.com/236x/44/87/d9/4487d9f8952af5538ca34ddf06a09d5c.jpg"
+      />
+      <img
+        src="https://i.pinimg.com/736x/e2/c5/6b/e2c56b5205b2ad7eb31b52f34bb1ee29.jpg"
+        alt="crack"
+      />
+      <img
+        src="https://i.pinimg.com/originals/a0/dc/5f/a0dc5f8fc33cd8fd01d26c8f203d0b1c.gif"
+        title="Skeleton dance"
+      />
+      <img
+        src="https://i.ibb.co/HXT17Hv/El-bicho-siuuu.jpg"
+        alt="El Bicho Cucuteño"
+      />
+      <img
+        src="https://i.pinimg.com/564x/9a/9b/48/9a9b4809ba66f92e280e13b25060f86b.jpg"
+        alt="Sin embargo gato"
+      />
+      <img
+        src="https://media.discordapp.net/attachments/900104458963415073/1182656209766068354/SaveTwitter_Net_GAVaeC3bEAA7UeB_gif__AdobeExpress_1.gif?ex=65d88bed&is=65c616ed&hm=40da00a2486ffa56f055b11b722fc469a7006f376a6a65625566c8149ef7910b&"
+        alt="Yo cuando aprueben el PR"
+      />
+    </div>
+    <table id="customers">
+      <tr>
+        <th>Nombre</th>
+        <th>Color</th>
+        <th>Comida</th>
+      </tr>
+      <tr>
+        <td>Daniel Chanci</td>
+        <td>Negro</td>
+        <td>Pizza</td>
+      </tr>
+      <tr>
+        <td>Sebastián Moreno</td>
+        <td>Lila</td>
+        <td>Frijoles</td>
+      </tr>
+      <tr>
+        <td>Luis Altamar</td>
+        <td>Verde</td>
+        <td>Salchipapa Costeña</td>
+      </tr>
+      <tr>
+        <td>Mateo Álvarez Lebrum</td>
+        <td>Azul</td>
+        <td>Hamburguesa</td>
+      </tr>
+      <tr>
+        <td>Santiago Salazar</td>
+        <td>Azul oscuro</td>
+        <td>Caracoles</td>
+      </tr>
+      <tr>
+        <td>Juan Carlos M</td>
+        <td>Verde</td>
+        <td>Sobrebarriga</td>
+      </tr>
+      <tr>
+        <td>Santiago Varela</td>
+        <td>Azul</td>
+        <td>Pizza</td>
+      </tr>
+      <tr>
+        <td>Guillermo Toloza G.</td>
+        <td>Negro</td>
+        <td>Sushi</td>
+      </tr>
+      <tr>
+        <td>Juan Valencia</td>
+        <td>Morado</td>
+        <td>Pasta</td>
+      </tr>
+      <tr>
+        <td>Michael Moreno</td>
+        <td>Rosado</td>
+        <td>Hamburguesa</td>
+      </tr>
+    </table>
+    <div class="centered-content">
+      <a
+        class="custom-btn"
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        target="_blank"
+        >Cuenta gratis Platzi</a
+      >
+    </div>
+    <div class="centered-content">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/YG6kGa3rcg0?si=CpO-mJCdFj5j003M&autoplay=1"
+        allow="autoplay"
+        frameborder="0"
+      >
+      </iframe>
+    </div>
+  </body>
 </html>
