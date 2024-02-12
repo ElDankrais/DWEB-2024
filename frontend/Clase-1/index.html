@@ -6,33 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .header-img {
-            width: 150px; 
-        }
-
-        #header {
-            margin-bottom: 20px;
-            display: inline-block;
-            width: 100%;
-            border: 5px dashed royalblue;
-        }
-
-        .banner {
-              float: right;
-        }
-
-        .img-container {
-          border: 2px solid blueviolet;
-          margin-bottom: 20px;
-        }
-
-        .img-container img {
-          margin-left: 5px;
-        }
         #customers {
           font-family: Arial, Helvetica, sans-serif;
           border-collapse: collapse;
@@ -86,81 +59,61 @@
         padding: 20px;
         }
 
-        .custom-btn {
-          display: inline-block;
-          padding: 10px 20px;
-          margin: 10px 0;
-          color: #fff;
-          background-color: #04AA6D;
-          border: 1px solid #028c59;
-          border-radius: 5px;
-          text-decoration: none;
+        .container-multimedia {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
 
-        .custom-btn:hover {
-          background-color: #028c59;
-          border: 1px solid #016842;
-          transition: 0.3s;
-          transform: scale(1.05);
-        }
-
-        .centered-content {
-          text-align: center;
+        .item {
+          display: flex;
+          padding: 20px;
         }
     </style>
 </head>
 <body>
-  <div id="header">
     <h1>Hola mundo</h1>
-    <div class="banner">
-      <img class="header-img" src="https://img.freepik.com/free-photo/lovely-pet-portrait-isolated_23-2149192357.jpg?w=996&t=st=1707691798~exp=1707692398~hmac=aa0ec2d06aee8efbabab995c14b171edd7bcadb9f1b182e1821af39f3321f8c2" alt="perrito">
-      <span>Mi primera chamba</span>
-    </div>
-  </div>
-  <div class="img-container">
-    <h3>Aquí van las imágenes</h3>
-    <img src="https://i.pinimg.com/236x/44/87/d9/4487d9f8952af5538ca34ddf06a09d5c.jpg">
-    <img src="https://i.pinimg.com/736x/e2/c5/6b/e2c56b5205b2ad7eb31b52f34bb1ee29.jpg" alt="crack">
-  </div>
-  <table id="customers">
-    <tr>
-      <th>Nombre</th>
-      <th>Color</th>
-      <th>Comida</th>
-    </tr>
-    <tr>
-      <td>Daniel Chanci</td>
-      <td>Negro</td>
-      <td>Pizza</td>
-    </tr>
-    <tr>
-      <td>Sebastián Moreno</td>
-      <td>Lila</td>
-      <td>Frijoles</td>
-    </tr>
-    <tr>
-      <td>Luis Altamar</td>
-      <td>Verde</td>
-      <td>Salchipapa Costeña</td>
-    </tr>
-    <tr>
-      <td>Mateo Álvarez Lebrum</td>
-      <td>Azul</td>
-      <td>Hamburguesa</td>
-    </tr>
-    <tr>
-      <td>Santiago Salazar</td>
-      <td>Azul oscuro</td>
-      <td>Caracoles</td>
-    </tr>
-    <tr>
-      <td>Juan Carlos M</td>
-      <td>Verde</td>
-      <td>Sobrebarriga</td>
-    </tr>
-  </table>
-  <div class="centered-content">
-    <a class="custom-btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Cuenta gratis Platzi</a>
+    <p>Mi primera chamba</p>
+    <table id="customers">
+      <tr>
+        <th>Nombre</th>
+        <th>Color</th>
+        <th>Comida</th>
+      </tr>
+      <tr>
+        <td>Daniel Chanci</td>
+        <td>Negro</td>
+        <td>Pizza</td>
+      </tr>
+      <tr>
+        <td>Sebastián Moreno</td>
+        <td>Lila</td>
+        <td>Frijoles</td>
+      </tr>
+      <tr>
+        <td>Guillermo Toloza</td>
+        <td>Negro</td>
+        <td>Sushi</td>
+      </tr>
+    </table>
+  <div class="container-multimedia">
+    <div class="item"> 
+      <iframe   
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/YG6kGa3rcg0?si=CpO-mJCdFj5j003M&autoplay=1" 
+        allow="autoplay" 
+        frameborder="0"
+      >
+    </iframe>
+    <div>
+    <div class="item"> 
+      <img 
+        src="Images/El bicho siuuu.jpg" 
+        alt="El Bicho Cucuteño"
+      >
+    <div>
   </div>
 </body>
 </html>
