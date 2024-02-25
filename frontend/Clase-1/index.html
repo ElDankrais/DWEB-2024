@@ -1,141 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        img{
-          max-width: 20%; 
-          max-height: 200px; 
-          position: relative;
-          overflow: hidden; 
-        }
-        
-        .header-img {
-            width: 150px; 
-        }
+    img {
+      max-width: 20%;
+      max-height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
 
-        #header {
-            margin-bottom: 20px;
-            display: inline-block;
-            width: 100%;
-            border: 5px dashed royalblue;
-        }
+    .header-img {
+      width: 150px;
+    }
 
-        .banner {
-              float: right;
-              padding: 20px;
-        }
+    #header {
+      margin-bottom: 20px;
+      display: inline-block;
+      width: 100%;
+      border: 5px dashed royalblue;
+    }
 
-        .img-container {
-          border: 2px solid blueviolet;
-          margin-bottom: 20px;
-        }
+    .banner {
+      float: right;
+      padding: 20px;
+    }
 
-        .img-container img {
-          margin-left: 5px;
-          width: 250px;
-        }
-        #customers {
-          font-family: Arial, Helvetica, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        #customers td, #customers th {
-          border: 1px solid #ddd;
-          padding: 8px;
-        }
-        
-        #customers tr:nth-child(even){background-color: #f2f2f2;}
-        
-        #customers tr:hover {background-color: #ddd;}
-        
-        #customers th {
-          padding-top: 12px;
-          padding-bottom: 12px;
-          text-align: left;
-          background-color: #04AA6D;
-          color: white;
-        }
+    .img-container {
+      border: 2px solid blueviolet;
+      margin-bottom: 20px;
+    }
 
-        #imagen_astronauta{
-          width: 100%;
-          height: auto;
-          display: block;
-          margin: 0;
-          padding: 0;
-        }
+    .img-container img {
+      margin-left: 5px;
+      width: 250px;
+    }
 
-        input[type=text], select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        }
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-        input[type=submit] {
-        width: 100%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        }
+    #customers td,
+    #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
 
-        input[type=submit]:hover {
-        background-color: #45a049;
-        }
+    #customers tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
 
-        .form-div {
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        padding: 20px;
-        }
+    #customers tr:hover {
+      background-color: #ddd;
+    }
 
-        .custom-btn {
-          display: inline-block;
-          padding: 10px 20px;
-          margin: 10px 0;
-          color: #fff;
-          background-color: #04AA6D;
-          border: 1px solid #028c59;
-          border-radius: 5px;
-          text-decoration: none;
-        }
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
 
-        .custom-btn:hover {
-          background-color: #028c59;
-          border: 1px solid #016842;
-          transition: 0.3s;
-          transform: scale(1.05);
-        }
+    #imagen_astronauta {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
 
-        .centered-content {
-          text-align: center;
-        }
-    </style>
+    input[type=text],
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .form-div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .custom-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 0;
+      color: #fff;
+      background-color: #04AA6D;
+      border: 1px solid #028c59;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .custom-btn:hover {
+      background-color: #028c59;
+      border: 1px solid #016842;
+      transition: 0.3s;
+      transform: scale(1.05);
+    }
+
+    .centered-content {
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
   <div id="header">
     <h1>Hola mundo</h1>
     <div class="banner">
-      <img class="header-img" src="https://img.freepik.com/free-photo/lovely-pet-portrait-isolated_23-2149192357.jpg?w=996&t=st=1707691798~exp=1707692398~hmac=aa0ec2d06aee8efbabab995c14b171edd7bcadb9f1b182e1821af39f3321f8c2" alt="perrito">
+      <img class="header-img"
+        src="https://img.freepik.com/free-photo/lovely-pet-portrait-isolated_23-2149192357.jpg?w=996&t=st=1707691798~exp=1707692398~hmac=aa0ec2d06aee8efbabab995c14b171edd7bcadb9f1b182e1821af39f3321f8c2"
+        alt="perrito">
       <span>Mi primera chamba</span>
     </div>
     <div class="banner">
-      <img class="imagen_astronauta header-img" src="https://previews.123rf.com/images/amunique/amunique2303/amunique230308083/200661324-astronauta-en-el-espacio-ultraterrestre-ilustraci%C3%B3n-dibujada-a-mano-sobre-fondo-oscuro.jpg" alt="Imagen Hinara">
+      <img class="imagen_astronauta header-img"
+        src="https://previews.123rf.com/images/amunique/amunique2303/amunique230308083/200661324-astronauta-en-el-espacio-ultraterrestre-ilustraci%C3%B3n-dibujada-a-mano-sobre-fondo-oscuro.jpg"
+        alt="Imagen Hinara">
       <span>Tachas...</span>
     </div>
   </div>
@@ -145,32 +158,53 @@
     <img src="https://i.pinimg.com/736x/e2/c5/6b/e2c56b5205b2ad7eb31b52f34bb1ee29.jpg" alt="crack">
     <img src="https://i.pinimg.com/originals/a0/dc/5f/a0dc5f8fc33cd8fd01d26c8f203d0b1c.gif" title="Skeleton dance">
     <img src="https://i.ibb.co/HXT17Hv/El-bicho-siuuu.jpg" alt="El Bicho Cucuteño">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2B9iTxBnvsQePXuMaqyB0NxXxJ7vnE0TbAVdB-OzJWVZdMpeaK8ZwwNuw7C5rRIg_yhU&usqp=CAU">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2B9iTxBnvsQePXuMaqyB0NxXxJ7vnE0TbAVdB-OzJWVZdMpeaK8ZwwNuw7C5rRIg_yhU&usqp=CAU">
     <img src="https://i.pinimg.com/564x/9a/9b/48/9a9b4809ba66f92e280e13b25060f86b.jpg" alt="Sin embargo gato">
     <img src="https://ih1.redbubble.net/image.2228364146.8712/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Ballin">
     <img src="https://i.pinimg.com/564x/22/a7/24/22a7249359044d2f982ef9b8d53defd5.jpg" alt="Meme gato programador">
-    <img src="https://i.pinimg.com/originals/23/db/5c/23db5c8d9fbd2cfd696d64a7963b76d3.gif" title="Toothless" alt="Toothless">
+    <img src="https://i.pinimg.com/originals/23/db/5c/23db5c8d9fbd2cfd696d64a7963b76d3.gif" title="Toothless"
+      alt="Toothless">
     <img src="https://i.redd.it/5novwto273b21.jpg" alt="Barney">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/250px-Koala_climbing_tree.jpg" alt="koala">
     <img
-        src="https://media.discordapp.net/attachments/900104458963415073/1182656209766068354/SaveTwitter_Net_GAVaeC3bEAA7UeB_gif__AdobeExpress_1.gif?ex=65d88bed&is=65c616ed&hm=40da00a2486ffa56f055b11b722fc469a7006f376a6a65625566c8149ef7910b&"
-        alt="Fern dancing"
-      />
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/250px-Koala_climbing_tree.jpg"
+      alt="koala">
+    <img
+      src="https://media.discordapp.net/attachments/900104458963415073/1182656209766068354/SaveTwitter_Net_GAVaeC3bEAA7UeB_gif__AdobeExpress_1.gif?ex=65d88bed&is=65c616ed&hm=40da00a2486ffa56f055b11b722fc469a7006f376a6a65625566c8149ef7910b&"
+      alt="Fern dancing" />
     <img src="https://i.pinimg.com/originals/90/c1/58/90c158ec1f67b8025c509ee98cb26e4e.png" alt="lo he visto">
     <img src="https://i.pinimg.com/originals/82/23/a5/8223a5ae491bed504bcdd5c7518927f8.jpg" alt="mondongo">
-    <img src="https://imgb.ifunny.co/images/38d1e871d83560fb01e97dc3d06985bf1de63f303be116ac879f6b039780394c_1.webp" alt="no dormí nada">
+    <img src="https://imgb.ifunny.co/images/38d1e871d83560fb01e97dc3d06985bf1de63f303be116ac879f6b039780394c_1.webp"
+      alt="no dormí nada">
     <img src="https://i.ibb.co/xFwCMss/wp4000512.png" alt="WROEF">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAQHhPnxDO3nUkoOweQxTxEPifUdGqLRyHZa814cxvPQ&s" alt="vas a caer gege">
-    <img src="https://cdn.verbub.com/images/dia-42-aun-no-se-dan-cuenta-que-no-soy-uno-de-217801.jpg" alt="Un infiltrado en la foto">
-    <img src="https://www.boredpanda.es/blog/wp-content/uploads/2022/03/07-clipimage-6229f1147f66b__700-622b13f7ac86e__700.jpg">
-    <img src="https://fifpro.org/media/fhmfhvkx/messi-world-cup.jpg?rxy=0.48356841796117644,0.31512414378031967&width=800&height=512&rnd=133210253587130000" alt="Messi winning World Cup">
-    <img src="https://cdn.discordapp.com/attachments/641410021195776003/1208959803875917916/RDT_20240216_0125564648285568636719860.gif?ex=65e52e8e&is=65d2b98e&hm=298fb5e7e4cd27dfc527a336270502d2fb31e973f9969533dc02b9f7a4b7a0c7&" 
-    alt="comprense helldivers">
-    <img src="https://i.ytimg.com/vi/RSoK5AO2wRQ/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgUyhCMA8=&rs=AOn4CLBmwEGFazhI8Jw0A5NprzS6OrFxZg" title="La Creatura">
-    <img src="https://cdn.verbub.com/images/cuando-le-recomendaste-tu-serie-favorita-a-tu-amigo-y-no-le-523812.jpg" alt="amigo burro">
-    <img src="https://i.pinimg.com/564x/30/e4/ae/30e4ae5417c9c83d98f5e7bbb1f13e56.jpg" alt="marca de maldicion" width="300" height="400">
-    <img src="https://www.elpais.com.co/resizer/0dfZf0ER6HiQbcjiQ77I5MF-P80=/768x432/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/ES4YNNALTVAY3I5RENIXL5WIQI.jpg" alt="Gato negrito mirando a otro">
-    <img src="https://img.asmedia.epimg.net/resizer/H5YQ1MexEOPBaKS8jzrV7fQ0DxQ=/1472x1104/filters:focal(814x259:824x269)/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/3ISUUTQDVJAPDPTPXL6LTJ7DR4.png" alt="Mi primer fork">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAQHhPnxDO3nUkoOweQxTxEPifUdGqLRyHZa814cxvPQ&s"
+      alt="vas a caer gege">
+    <img src="https://cdn.verbub.com/images/dia-42-aun-no-se-dan-cuenta-que-no-soy-uno-de-217801.jpg"
+      alt="Un infiltrado en la foto">
+    <img
+      src="https://www.boredpanda.es/blog/wp-content/uploads/2022/03/07-clipimage-6229f1147f66b__700-622b13f7ac86e__700.jpg">
+    <img
+      src="https://fifpro.org/media/fhmfhvkx/messi-world-cup.jpg?rxy=0.48356841796117644,0.31512414378031967&width=800&height=512&rnd=133210253587130000"
+      alt="Messi winning World Cup">
+    <img
+      src="https://cdn.discordapp.com/attachments/641410021195776003/1208959803875917916/RDT_20240216_0125564648285568636719860.gif?ex=65e52e8e&is=65d2b98e&hm=298fb5e7e4cd27dfc527a336270502d2fb31e973f9969533dc02b9f7a4b7a0c7&"
+      alt="comprense helldivers">
+    <img
+      src="https://i.ytimg.com/vi/RSoK5AO2wRQ/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgUyhCMA8=&rs=AOn4CLBmwEGFazhI8Jw0A5NprzS6OrFxZg"
+      title="La Creatura">
+    <img src="https://cdn.verbub.com/images/cuando-le-recomendaste-tu-serie-favorita-a-tu-amigo-y-no-le-523812.jpg"
+      alt="amigo burro">
+    <img src="https://i.pinimg.com/564x/30/e4/ae/30e4ae5417c9c83d98f5e7bbb1f13e56.jpg" alt="marca de maldicion"
+      width="300" height="400">
+    <img
+      src="https://www.elpais.com.co/resizer/0dfZf0ER6HiQbcjiQ77I5MF-P80=/768x432/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/ES4YNNALTVAY3I5RENIXL5WIQI.jpg"
+      alt="Gato negrito mirando a otro">
+    <img
+      src="https://img.asmedia.epimg.net/resizer/H5YQ1MexEOPBaKS8jzrV7fQ0DxQ=/1472x1104/filters:focal(814x259:824x269)/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/3ISUUTQDVJAPDPTPXL6LTJ7DR4.png"
+      alt="Mi primer fork">
+    <img src="https://i.pinimg.com/originals/5b/d6/8c/5bd68c6d04eb8a54e0bab9380b46db3b.png" alt="Internal Server Error">
+
+
   </div>
   <table id="customers">
     <tr>
@@ -229,12 +263,12 @@
       <td>Sopa de Lentejas</td>
     </tr>
     <tr>
-      <tr>
-        <td>Jonathan López Pérez</td>
-        <td>Negro</td>
-        <td>Salchipapa</td>
-      </tr>
-      <tr>
+    <tr>
+      <td>Jonathan López Pérez</td>
+      <td>Negro</td>
+      <td>Salchipapa</td>
+    </tr>
+    <tr>
       <td>Juan Valencia</td>
       <td>Morado</td>
       <td>Pasta</td>
@@ -344,20 +378,22 @@
       <td>Morado</td>
       <td>Changua y mondongo</td>
     </tr>
+    <tr>
+      <td>Jakelin Correa Palacio</td>
+      <td>Rosado</td>
+      <td>Hamburguesa</td>
+    </tr>
   </table>
   <div class="centered-content">
     <a class="custom-btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Cuenta gratis Platzi</a>
   </div>
   <div class="centered-content">
-    <a class="custom-btn" href="https://www.youtube.com/watch?v=VSp7_bhhpD8" target="_blank">SIA cupos infinitos APK MOD 2024</a>
+    <a class="custom-btn" href="https://www.youtube.com/watch?v=VSp7_bhhpD8" target="_blank">SIA cupos infinitos APK MOD
+      2024</a>
   </div>
   <div class="centered-content">
-    <iframe   
-    width="560" 
-    height="315"
-    src="https://www.youtube.com/embed/YG6kGa3rcg0?si=CpO-mJCdFj5j003M&autoplay=1" 
-    allow="autoplay" 
-    frameborder="0">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YG6kGa3rcg0?si=CpO-mJCdFj5j003M&autoplay=1"
+      allow="autoplay" frameborder="0">
     </iframe>
   </div>
   <div class="centered-content">
@@ -365,23 +401,16 @@
     <div>
       Para la Gashina
     </div>
-    <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/FdGJ12NZLBo?si=ZVj1Ardprqo_3Kzj&autoplay=1" 
-    frameborder="0" 
-    allow="autoplay">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FdGJ12NZLBo?si=ZVj1Ardprqo_3Kzj&autoplay=1"
+      frameborder="0" allow="autoplay">
     </iframe>
   </div>
   <div class="centered-content">
-    <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/eFqmUzOrnDY?si=1j396xXK2FBbMJB7&amp;start=14&autoplay=1"
-    frameborder="0"
-    allow="autoplay">
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/eFqmUzOrnDY?si=1j396xXK2FBbMJB7&amp;start=14&autoplay=1" frameborder="0"
+      allow="autoplay">
     </iframe>
   </div>
 </body>
-</html>
 
+</html>
