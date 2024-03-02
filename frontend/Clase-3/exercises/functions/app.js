@@ -48,6 +48,25 @@ console.log(square(7));
 //High order functions
 //Funciones que trabajan con otras funciones (reciben o retornan)
 
+function arregloFiltro(arreglo, prueba) {
+    const arregloFiltrado = [];
+    for (let elemento of arreglo) {
+        if (prueba(elemento)) {
+            arregloFiltrado.push(elemento);
+        }
+    }
+    return arregloFiltrado;
+};
+const arregloMezclado = [1, true, null, "Hola", undefined, "Mundo", false];
+const soloCadenas = arregloFiltro(arregloMezclado, elemento => typeof elemento === 'cadena');
+onlyCadenas; // ['Hola', 'Mundo']
+
+//Una mejora 
+
+const arregloMezclado2 = [1, true, null, "Hola", undefined, "Mundo", false];
+const stringArreglo = arregloMezclado2.filter(elemento => typeof elemento === 'cadena')
+arregloDeCadenas; // ['Hola', 'Mundo']
+
 //Algunos ejemplos con this
 
 //try - catch
