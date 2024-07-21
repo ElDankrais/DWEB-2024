@@ -9,6 +9,14 @@ noBtn.addEventListener('click', () => {
     //HINT # 2: offsetWidth and offsetHeight are properties of html elements
     //HINT # 3: This button has position 'absolute', which means that its position in the html document could
     //be given by the style properties left and top (in px values)
+    const maxWidth = window.innerWidth - noBtn.offsetWidth;
+    const maxHeight = window.innerHeight - noBtn.offsetHeight;
+
+    const newX = Math.floor(Math.random() * maxWidth);
+    const newY = Math.floor(Math.random() * maxHeight);
+
+    noBtn.style.left = newX + 'px';
+    noBtn.style.top = newY + 'px';
 });
 
 yesBtn.addEventListener('click', () => {
