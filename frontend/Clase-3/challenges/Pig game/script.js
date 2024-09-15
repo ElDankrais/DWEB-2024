@@ -44,11 +44,21 @@ document.getElementById("rotate").onclick = function(){
     //3. If value is one, user lost his accumulated value and his turn.
     //hint: toggle seems cool, don't you think? Only applies if user lost turn
     //hint # 2: Current user is either 0 or 1
+    if(dice === 1){
+      roundScore = 0;
+      document.querySelector(".current-"+current).textContent = roundScore;
+      document.querySelector(".player-"+current).classList.toggle("active");
+      current = 1 - current;
+      document.querySelector(".player-"+current).classList.toggle("active");
+    }
 
-    document.querySelector(".player-0").classList.toggle("active");
-    document.querySelector(".player-1").classList.toggle("active");
-    document.querySelector(".current-"+current).textContent = dice;
-    current = 1 - current;
+    else {
+      roundScore = roundScore + dice;
+      //document.querySelector(".player-0").classList.toggle("active");
+      //document.querySelector(".player-1").classList.toggle("active");
+      document.querySelector(".current-"+current).textContent = roundScore;
+    }
+
  }
 }
 
@@ -60,7 +70,20 @@ document.getElementById("hold").onclick = function(){
   //As long as the game is running, the score of the CURRENT USER should be accumulated if the usert holds
   //this value should be visible in his score
   //current user wins if his/her/their score is equal or more than 100. Afther this, game should be stopped
+  if(gameRunning){
+    score[current] = score[current] + roundScore;
+    document.querySelector(".score-"+current).textContent = score[current];
 
+    if(score[current] >= 100){
+      gameRunning = false;
+    }
+
+    roundScore = 0;
+    document.querySelector(".current-"+current).textContent = roundScore;
+    document.querySelector(".player-"+current).classList.toggle("active");
+    current = 1 - current;
+    document.querySelector(".player-"+current).classList.toggle("active");
+  }
  }
 
 
