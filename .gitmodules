@@ -1,0 +1,3 @@
+[submodule "frontend/Clase-4/pokemon/frontend/Clase-4/pokemon/whos-that-pokemon"]
+	path = frontend/Clase-4/pokemon/frontend/Clase-4/pokemon/whos-that-pokemon
+	url = https://github.com/doctafaustus/whos-that-pokemon
