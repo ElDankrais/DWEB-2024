@@ -1,91 +1,101 @@
 const express = require('express');
-
+const cors = require('cors');
 const crypto = require('node:crypto');
 
 const movies = require('./movies.json');
-const { validateMovie, validatePartialMovie } = require('./schemas/movies');
+const { validateMovie,validatePartialMovie } = require('./schemas/movies');
 
 const app = express();
 app.use(express.json());
+app.use(cors({
+    origin: (origin, callback) => {
+        console.log(origin);
+        const ACCEPTED_ORIGINS = [
+            'http://localhost:1234',
+            'http://localhost:8080',
+            'http://127.0.0.1:5500'
+        ];
 
-app.disable('x-powered-by');
+        if (ACCEPTED_ORIGINS.includes(origin)) {
+            return callback(null, true);
+        }
 
-//Middlewares
+        if (!origin) return callback(null, true);
 
-// app.get('/', (req, res) => res.json({message: 'Aprendamos juntos'}));
+        callback(new Error('Not allowed by CORS'));
+    }
+}));
 
 app.get('/movies', (req, res) => {
     const { genre } = req.query;
     if (genre) {
         const filteredMovies = movies.filter(
-            movie => movie.genre.some(g => g.toLowerCase() === genre.toLowerCase())
-        )
-        return res.json(filteredMovies)
+            movie => movie.genre.some(movieGenre => movieGenre.toLowerCase() === genre.toLowerCase())
+        );
+        return res.json(filteredMovies);
     }
-    res.json(movies)
-})
+    res.json(movies);
+});
 
 app.get('/movies/:id', (req, res) => {
     const { id } = req.params;
     const movie = movies.find(movie => movie.id === id);
     if (movie) return res.json(movie);
-    res.status(404).json({message: 'No existe esa película'});
-})
+    res.status(404).json({ message: 'La película solicitada no se ha encontrado' });
+});
 
 app.post('/movies', (req, res) => {
-    const result = validateMovie(req.body);
-
+    const newMovie = req.body;
+    const result = validateMovie(newMovie);
+    
     if (!result.success) {
-        return res.status(422).json({error: JSON.parse(result.error.message)})
-    }
-    const newMovie = {
-        id: crypto.randomUUID(),
-        ...result
+        return res.status(400).json({ errors: result.error.message});
     }
 
-    movies.push(newMovie)
+    const newMovieWithId = { ...result.data, id: crypto.randomUUID() };
 
-    res.status(201).json(newMovie)
+    movies.push(newMovieWithId);
+
+    res.status(201).json(newMovieWithId);
+});
+
+app.delete('/movies/:id', (req, res) => {
+    const { id } = req.params
+    const movieIndex = movies.findIndex(movie => movie.id === id)
+  
+    if (movieIndex === -1) {
+      return res.status(404).json({ message: 'Movie not found' })
+    }
+  
+    movies.splice(movieIndex, 1)
+  
+    return res.json({ message: 'Movie deleted' })
 })
 
 app.patch('/movies/:id', (req, res) => {
-    const result = validatePartialMovie(req.body);
-    
+    const result = validatePartialMovie(req.body)
+
     if (!result.success) {
-        return res.status(422).json({error: JSON.parse(result.error.message)})
+        return res.status(400).json({ error: JSON.parse(result.error.message) })
     }
 
-    const { id } = req.params;
-    const movieIndex = movies.findIndex(movie => movie.id === id);
+    const { id } = req.params
+    const movieIndex = movies.findIndex(movie => movie.id === id)
 
     if (movieIndex === -1) {
-        return res.status(404).json({message: 'No existe esa película'}); 
+        return res.status(404).json({ message: 'Movie not found' })
     }
 
-    const updatedMovie = {
+    const updateMovie = {
         ...movies[movieIndex],
         ...result.data
     }
 
-    movies[movieIndex] = updatedMovie;
+    movies[movieIndex] = updateMovie
 
-    return res.json(updatedMovie)
-
-});
-
-app.delete('/movies/:id', (req, res) => {
-    const { id } = req.params;
-    const movieIndex = movies.findIndex(movie => movie.id === id);
-
-    if (movieIndex === -1) {
-        return res.status(404).json({message: 'No existe esa película'}); 
-    }
-
-    movies.splice(movieIndex, 1);
-
-    return res.json({ message: 'La borré papu'});
+    return res.json(updateMovie)
 })
 
 app.listen(1234, () => {
-    console.log(`server listening on port http://localhost:1234`)
+    console.log('Server running on port 1234');
 });

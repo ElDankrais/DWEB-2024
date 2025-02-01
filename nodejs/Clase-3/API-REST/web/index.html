@@ -19,7 +19,7 @@
   </style>
   <script type="module">
     fetch('http://localhost:1234/movies')
-      .then(res => res.json())
+      .then(response => response.json())
       .then(movies => {
         const html = movies.map(movie => {
           return `
@@ -33,27 +33,23 @@
           `
         }).join('')
 
-        document.querySelector('main').innerHTML = html
+        document.querySelector('main').innerHTML = html;
 
         document.addEventListener('click', e => {
           if (e.target.matches('button')) {
-            const article = e.target.closest('article')
-            const id = article.dataset.id
+            const article = e.target.closest('article');
+            const id = article.dataset.id;
 
             fetch(`http://localhost:1234/movies/${id}`, {
               method: 'DELETE'
             })
-              .then(res => {
-                if (res.ok) {
-                  article.remove()
-                }
+              .then(response => response.json())
+              .then(data => {
+                article.remove();
               })
-            }
-          
+          }
         })
       })
-  </script>
-    
   </script>
 </head>
 <body>
