@@ -13,11 +13,11 @@ Content-Type: application/json
 
 {
   "sql": "SELECT * FROM users",
-  "title": "The Godfather",
+  "title": "EL PASEOOOOO",
   "year": 1975,
   "director": "Francis Ford Coppola",
   "duration": 175,
-  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+  "poster": "https://www.proimagenescolombia.com/photos/57150_1119_imagen__.jpg",
   "genre": [
     "Crime",
     "Drama"
